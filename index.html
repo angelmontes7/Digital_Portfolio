@@ -9,6 +9,21 @@
 </head>
 <body>
 
+    <!-- Navbar Section -->
+    <nav class="navbar">
+        <ul class="menu">
+            <li><a href="#about-me">About Me</a></li>
+            <li><a href="#work-experience">Work Experience</a></li>
+            <li><a href="#coursework">Coursework</a></li>
+            <li><a href="#projects">Related Projects</a></li>
+            <li><a href="#community">Campus & Community</a></li>
+            <li><a href="#skills">Skills</a></li>
+        </ul>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            <img src="assets/icons/menu.png" alt="Menu" class="icon">
+        </button>
+    </nav>
+
     <!-- Header Section -->
     <header class="profile-header">
         <h1>Angel Montes</h1>
@@ -24,8 +39,15 @@
     </header>
 
     <div class="container">
-        
-        <section class="work-experience">
+        <section id="about-me" class="about-me">
+            <h1>About Me</h1>
+            <div class="description">
+                I am passionate about my education and furthering my career. I am looking for opportunities such as internships 
+                part-time, or full-time positoins in which I can obtain work experience while being able to further my education 
+                and collaborate with others to broaden my knowledge. My goal is to become a software engineer.
+            </div>
+        </section>
+        <section id="work-experience" class="work-experience">
             <h1>Work Experience</h1>
             <div class="description">
                 <p><strong>Comcast | Naperville, Illinois</strong> (October 2022 - Present)</p>
@@ -40,7 +62,7 @@
             </div>
         </section>
 
-        <section class="coursework">
+        <section id="coursework" class="coursework">
             <h1>Related Coursework</h1>
             <div class="description">
                 <ul>
@@ -54,7 +76,7 @@
             </div>
         </section>
 
-        <section class="projects">
+        <section id="projects" class="projects">
             <h1>Related Projects</h1>
             <div class="description">
                 <ul>
@@ -66,7 +88,7 @@
             </div>
         </section>
 
-        <section class="community">
+        <section id="community" class="community">
             <h1>Campus & Community Involvement</h1>
             <div class="description">
                 <p><strong>North Central College Cardinal First Program | Naperville, IL</strong> (August 2022 – Present)</p>
@@ -77,7 +99,7 @@
             </div>
         </section>
 
-        <section class="skills">
+        <section id="skills" class="skills">
             <h1>Skills</h1>
             <div class="skill">
                 <p>Python</p>
@@ -123,6 +145,7 @@
         </section>        
 
     </div>
+    <script src="scripts.js"></script>
 
 </body>
 </html>

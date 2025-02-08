@@ -8,6 +8,82 @@ body {
     text-align: center;
 }
 
+/* Navbar Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Menu Icon */
+.menu-toggle {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    right: 20px; /* Move the icon to the right */
+    top: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu-toggle .icon {
+    width: 30px;
+    height: 30px;
+}
+
+/* Rotate the icon on click */
+.menu-toggle.active .icon {
+    transform: rotate(90deg); /* Rotate the icon on click */
+}
+
+/* Dropdown Menu Styles */
+.navbar .menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    width: 25%; /* 1/4 of the screen width */
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #333;
+    transform: translateX(100%); /* Initially hidden off-screen */
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar .menu li {
+    margin: 10px 0;
+}
+
+.navbar .menu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    display: block;
+}
+
+.navbar .menu a:hover {
+    color: #ffcc00;
+}
+
+/* Show the menu when active */
+.navbar.active .menu {
+    transform: translateX(0); /* Bring the menu into view */
+}
+
+
+
 /* Header Section */
 .profile-header {
     background: linear-gradient(45deg, #ffcc00, #ff6600);
@@ -117,7 +193,10 @@ h1 {
     transition: width 2s ease-in-out;
 }
 
-
+/* Show the menu when active */
+.navbar.active ul {
+    display: flex;
+}
 
 /* Animations */
 @keyframes fadeIn {
